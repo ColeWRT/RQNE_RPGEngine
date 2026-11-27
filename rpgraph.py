@@ -9,6 +9,9 @@ class Node:
         self.node_id = node_id
         self.neighbors = neighbors
 
+    def __str__(self):
+        return self.node_id + ":" + str(self.neighbors)
+
     def get_id(self):
         return self.node_id
 
@@ -21,6 +24,9 @@ class MapNode(Node):
         super().__init__(room_id, neighbors)
         self.name = location_name
         self.properties = properties
+
+    def __str__(self):
+        return self.node_id + ":\n\tneighbors: " + str(self.neighbors) + "\n\tlocation_name: " + self.name + "\n\tproperties:\n\t\t" + "\n\t\t".join(f"{key}: {value}" for key, value in self.properties.items())
 
     # Helper functions
     def get_name(self): # Get readable name of the location
@@ -81,6 +87,9 @@ class MapGraph:
             for room_id, data in json.load(file).items():
                 # Create map node for each room id
                 self.map_nodes[room_id] = MapNode(data["room_id"], data["neighbors"], data["name"], data["properties"])
+
+    def __str__(self):
+        return "\n".join(str(value) for key, value in self.map_nodes.items())
 
     def get_room(self, room_id : str):
         return self.map_nodes[room_id]
