@@ -8,7 +8,7 @@
             "room_004"
         ],
         "properties": {
-            "description": "Halfway between an archive and an alchemy lab, this place is crowded with information. How much use it is to anyone is debatable.",
+            "description": "Halfway between an archive and an alchemy lab, this place is crowded with information. How much use it is to anyone is debatable, though there's surely something of value in these shelves that reach the ceiling.",
             "dark": false,
             "locked": false
         }
@@ -22,7 +22,7 @@
             "room_008"
         ],
         "properties": {
-            "description": "The imposing corridor seems carved out of whole stone. You might believe you were inside a mountain if not for the windows revealing the blackness of the Void.",
+            "description": "The imposing corridor seems carved out of whole stone, lined with blue alchemical lights. You might believe you were inside a mountain if not for the windows revealing the blackness of the Void.",
             "dark": false,
             "locked": false
         }
@@ -36,7 +36,7 @@
             "room_006"
         ],
         "properties": {
-            "description": "The warmth of ovens and the smell of food makes this a welcoming place. There's always someone here, though they might be too focused on food to speak with you.",
+            "description": "The warmth of ovens and the smell of food makes this a welcoming place. There's always someone here, though they might be too focused on food to speak with you. A dull hum of noise constantly hovers in the room's high ceiling.",
             "dark": false,
             "locked": false
         }
@@ -75,7 +75,7 @@
             "room_007"
         ],
         "properties": {
-            "description": "The corridor is a sharp contrast to the rest of the facility, with plaster walls and wooden framing. A variety of doors to different dormitories line the walls.",
+            "description": "The corridor is a sharp contrast to the rest of the facility, with plaster walls and wooden framing. A variety of doors to different dormitories line the walls. Torchlight burns warm here, a contrast to the bare alchemical bulbs elsewhere in the facility",
             "dark": false,
             "locked": false
         }
@@ -93,14 +93,14 @@
             "locked": false
         }
     },
-    "balcony": {
+    "lab": {
         "room_id": "room_008",
-        "name": "Balcony",
+        "name": "Lab",
         "neighbors": [
             "room_002"
         ],
         "properties": {
-            "description": "There is nothing to see off the edge of the balcony but the infinite blackness of the Void. The area has been decorated nicely, though, with plants and an abundance of lanterns.",
+            "description": "This is a place of research, though it also seems to serve as a containment facility for some of the more dangerous things the Agents have collected. The room is lined with shelves of chemicals and components for experimentation.",
             "dark": false,
             "locked": true
         }
