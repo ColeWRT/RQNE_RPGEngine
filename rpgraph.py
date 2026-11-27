@@ -1,3 +1,5 @@
+import json
+
 class Node:
     # Initializes a node for a simple graph
     # Gives each node a string ID and a set of neigbors
@@ -71,8 +73,17 @@ class QuestNode(Node):
         return self.quest_visible
 
 class MapGraph:
-    pass
-    # can read from a json file to create a graph of MapNodes
+    def __init__(self, map_file : str):
+        self.map_nodes = {}
+
+        # Load map from JSON file into map_nodes dictionary
+        with open("resources/"+map_file, "r") as file:
+            for room_id, data in json.load(file).items():
+                # Create map node for each room id
+                self.map_nodes[room_id] = MapNode(data["room_id"], data["neighbors"], data["name"], data["properties"])
+
+    def get_room(self, room_id : str):
+        return self.map_nodes[room_id]
 
 class QuestGraph:
     pass

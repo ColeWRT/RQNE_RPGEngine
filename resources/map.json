@@ -1,19 +1,19 @@
 {
-    "library": {
+    "room_001": {
         "room_id": "room_001",
         "name": "Library",
         "neighbors": [
             "room_002",
-            "room_003",
-            "room_004"
+            "room_004",
+            "room_006"
         ],
         "properties": {
             "description": "Halfway between an archive and an alchemy lab, this place is crowded with information. How much use it is to anyone is debatable, though there's surely something of value in these shelves that reach the ceiling.",
-            "dark": false,
+			"items":["twine", "book of graves"],
             "locked": false
         }
     },
-    "north_hall": {
+    "room_002": {
         "room_id": "room_002",
         "name": "North Hall",
         "neighbors": [
@@ -23,25 +23,24 @@
         ],
         "properties": {
             "description": "The imposing corridor seems carved out of whole stone, lined with blue alchemical lights. You might believe you were inside a mountain if not for the windows revealing the blackness of the Void.",
-            "dark": false,
+			"items":["ink"],
             "locked": false
         }
     },
-    "cafeteria": {
+    "room_003": {
         "room_id": "room_003",
         "name": "Cafeteria",
         "neighbors": [
-            "room_001",
             "room_005",
             "room_006"
         ],
         "properties": {
             "description": "The warmth of ovens and the smell of food makes this a welcoming place. There's always someone here, though they might be too focused on food to speak with you. A dull hum of noise constantly hovers in the room's high ceiling.",
-            "dark": false,
+			"supply":["salt"],
             "locked": false
         }
     },
-    "secret_passage": {
+    "room_004": {
         "room_id": "room_004",
         "name": "Secret Passage",
         "neighbors": [
@@ -50,11 +49,11 @@
         ],
         "properties": {
             "description": "Hidden behind a stack of crates, you can tell this passage was deliberately hidden. Judging by the carpet of cobwebs and dust in this otherwise very neat place, it has been that way for some time.",
-            "dark": true,
+			"items":["weird poem"],
             "locked": true
         }
     },
-    "greenhouse": {
+    "room_005": {
         "room_id": "room_005",
         "name": "Greenhouse",
         "neighbors": [
@@ -63,24 +62,25 @@
         ],
         "properties": {
             "description": "This must be where the facility grows all its food and components. The air is humid, and you're initially tricked into thinking sunlight filters down from the ceiling, but it's just more alchemical lights.",
-            "dark": false,
+			"items":["daisy"],
+			"supply":["sulphur"],
             "locked": true
         }
     },
-    "south_hall": {
+    "room_006": {
         "room_id": "room_006",
         "name": "South Hall",
         "neighbors": [
+			"room_001",
             "room_003",
             "room_007"
         ],
         "properties": {
             "description": "The corridor is a sharp contrast to the rest of the facility, with plaster walls and wooden framing. A variety of doors to different dormitories line the walls. Torchlight burns warm here, a contrast to the bare alchemical bulbs elsewhere in the facility",
-            "dark": false,
             "locked": false
         }
     },
-    "rotunda": {
+    "room_007": {
         "room_id": "room_007",
         "name": "Rotunda",
         "neighbors": [
@@ -89,11 +89,11 @@
         ],
         "properties": {
             "description": "This is the facility's entrance. Hallways split off in two directions, going deeper in. The heavy portal door to the outside is currently sealed shut with a magic you can't identify.",
-            "dark": false,
+			"items":["strange pendant"],
             "locked": false
         }
     },
-    "lab": {
+    "room_008": {
         "room_id": "room_008",
         "name": "Lab",
         "neighbors": [
@@ -101,7 +101,8 @@
         ],
         "properties": {
             "description": "This is a place of research, though it also seems to serve as a containment facility for some of the more dangerous things the Agents have collected. The room is lined with shelves of chemicals and components for experimentation.",
-            "dark": false,
+			"items":["copper ingot"],
+			"supply":["mercury"],
             "locked": true
         }
     }
